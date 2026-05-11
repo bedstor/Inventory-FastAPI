@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import sqlite3
-
+ 
 
 app = FastAPI()
 
@@ -41,4 +41,3 @@ async def put_item(item_id: int, item: Item):
     db.commit()
     db.close()
     return {"message" : "Данные о товаре обновлены"}
-

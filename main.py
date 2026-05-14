@@ -1,15 +1,15 @@
+# Импортируем библиотеки
 from fastapi import FastAPI
 from pydantic import BaseModel
 import sqlite3
  
-
+# Создаём страницу
 app = FastAPI()
 
 class Item(BaseModel):
     name: str
     quantity: int
     price: int
-    
 
 
 @app.post("/items")
